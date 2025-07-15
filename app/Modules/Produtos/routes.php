@@ -1,20 +1,19 @@
 <?php
 
-use app\Modules\Produto\Controller\ProdutoController;
+use app\Modules\Produtos\Controller\ProdutoController;
 
     return [
         [   
-            "dir" => "Produto",
-            "route" => "/produtos",
+            "route" => "/",
             "controller" => new ProdutoController,
             "method" => "index",
             "http" => ["GET", "POST"]
         ],
            [
-            "dir" => "Produto",
-            "route" => "/produtos/delete/{uuid}",
+            "route" => "/{uuid}",
             "controller" => new ProdutoController,
             "method" => "delete",
             "http" => ["GET","POST"]
         ],
     ];
+

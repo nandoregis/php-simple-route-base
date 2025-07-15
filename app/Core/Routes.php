@@ -21,15 +21,15 @@ class Routes
           
             foreach ($metodo as $key_sec => $value) 
             {
-
-                $dir = strtolower($value['dir']);
-                $route = str_replace(['{', '}'], ['$',''], $value['route']);
+                $dirPrincipalRoute = strtolower($key);
+                $path = $value['route'] === '/' ? "" : $value['route'];
+                $route = '/' . $dirPrincipalRoute . str_replace(['{', '}'], ['$',''], $path);
                 $http = $value['http'];
                 $controller = $value['controller'];
                 $method = $value['method'];
 
-                foreach ($http as $key_ter => $value) {
-                    # code...´
+                foreach ($http as $key_ter => $value) 
+                {
                     if($value == 'GET') 
                     {
                         get($route, function () use ($controller , $method) {
@@ -48,6 +48,11 @@ class Routes
 
             }
         }
+    }
+
+    public function get_routes()
+    {
+        return  $this->routes;
     }
 
     private function get_modules(String $path)

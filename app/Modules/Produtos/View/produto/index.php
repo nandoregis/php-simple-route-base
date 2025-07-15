@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete</title>
+    <title>Produto</title>
 </head>
 <body>
-    <h3>DELETAR ITEM</h3>
+    <h2>
+        Meu produto especifico...
+    </h2>
 </body>
 </html>

@@ -8,7 +8,6 @@ class View
 
 {
     private $dir; // diretorio principal app/...
-
     public function __construct() 
     {
        $this->dir = str_replace('View','',__DIR__);
@@ -18,6 +17,7 @@ class View
     {   
 
         $dirView = $this->dir . "Modules" . DIRECTORY_SEPARATOR . str_replace('/','\\',$view);
+        
         try {
 
             if(!file_exists($dirView)) {

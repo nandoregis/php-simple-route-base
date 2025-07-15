@@ -4,8 +4,7 @@ use app\Modules\FichaTecnica\Controller\FichaTecnicaController;
 
     return [
         [   
-            "dir" => "FichaTecnica",
-            "route" => "/ficha-tecnica",
+            "route" => "/",
             "controller" => new FichaTecnicaController,
             "method" => "index",
             "http" => ["GET", "POST"]
